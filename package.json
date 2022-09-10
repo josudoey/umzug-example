@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "umzug:up": "node scripts/umzug.mjs up",
+    "umzug:down": "node scripts/umzug.mjs down",
+    "umzug": "node scripts/umzug.mjs"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,19 @@
   "bugs": {
     "url": "https://github.com/josudoey/umzug-example/issues"
   },
-  "homepage": "https://github.com/josudoey/umzug-example#readme"
+  "homepage": "https://github.com/josudoey/umzug-example#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "mongoose": "^6.6.0",
+    "umzug": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@babel/eslint-parser": "^7.18.9",
+    "eslint": "^8.23.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0"
+  }
 }
