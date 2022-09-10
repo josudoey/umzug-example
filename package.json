@@ -1,0 +1,19 @@
+{
+  "name": "umzug-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josudoey/umzug-example.git"
+  },
+  "author": "Joey Fang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josudoey/umzug-example/issues"
+  },
+  "homepage": "https://github.com/josudoey/umzug-example#readme"
+}
