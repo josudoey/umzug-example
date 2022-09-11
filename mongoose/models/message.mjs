@@ -1,6 +1,5 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
-import _ from 'lodash'
 import mongoose from 'mongoose'
 const __filename = fileURLToPath(import.meta.url)
 
@@ -29,7 +28,7 @@ schema.index({
 })
 
 const CollectionName = path.basename(__filename, '.mjs')
-const ModelName = _.camelCase(CollectionName).replace(/^\w{1}/, CollectionName[0].toUpperCase())
+const ModelName = CollectionName
 export { CollectionName, ModelName }
 
 export const Message = mongoose.model(

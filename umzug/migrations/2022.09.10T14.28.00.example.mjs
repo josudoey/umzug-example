@@ -1,5 +1,3 @@
-import { Message } from '../../mongoose/index.mjs'
-
 export const up = async ({ context: { connection, models } }) => {
   const { Message } = models
   await Message.create({
@@ -9,6 +7,7 @@ export const up = async ({ context: { connection, models } }) => {
 }
 
 export const down = async ({ context: { connection, models } }) => {
+  const { Message } = models
   await Message.deleteOne({
     key: 'first'
   })

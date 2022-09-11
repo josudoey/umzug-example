@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  mongo5:
+    image: mongo:5.0.12
+    # see https://github.com/docker-library/mongo/blob/master/5.0/docker-entrypoint.sh
+    volumes:
+      - ./mongo5/srv:/srv
+      - ./mongo5/db:/data/db
+      - ./mongo5/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "27117:27017"
+    command:
+      - --bind_ip_all
+      - --config
+      - /srv/mongod.conf

@@ -1,4 +1,4 @@
 import mongoose from 'mongoose'
-export { Message } from './models/message.mjs'
-
+import * as models from './models/index.mjs'
+export { models }
 export default mongoose

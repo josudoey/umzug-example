@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "mongo5:start": "docker-compose run -p 27117:27017  --rm mongo5",
+    "mongo5:init": "docker-compose exec mongo5 mongo /docker-entrypoint-initdb.d/rs-init.js",
     "umzug:up": "node scripts/umzug.mjs up",
     "umzug:down": "node scripts/umzug.mjs down",
-    "umzug": "node scripts/umzug.mjs"
+    "umzug": "node scripts/umzug.mjs",
+    "clean":"rm -r ./mongo5/db"
   },
   "repository": {
     "type": "git",
@@ -19,7 +22,6 @@
   },
   "homepage": "https://github.com/josudoey/umzug-example#readme",
   "dependencies": {
-    "lodash": "^4.17.21",
     "mongoose": "^6.6.0",
     "umzug": "^3.2.1"
   },
